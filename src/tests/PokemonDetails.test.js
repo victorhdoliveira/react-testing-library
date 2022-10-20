@@ -35,7 +35,7 @@ describe('teste do componente PokemonDetails', () => {
   it('Verifica a label do pokwmon favoritado', () => {
     renderWithRouter(<App />);
 
-    const link = screen.getByRole('link', { name: 'More details' });
+    const link = screen.getByRole('link', { name: /details/ });
     userEvent.click(link);
 
     const fav = screen.getByLabelText('Pokémon favoritado?');
